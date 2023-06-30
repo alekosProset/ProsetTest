@@ -18,9 +18,6 @@ class Category(models.Model):
     description = models.TextField(verbose_name='Description', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    description = models.TextField(verbose_name='Description', blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -36,9 +33,6 @@ class Book(models.Model):
     price = models.FloatField(verbose_name='Price')
     is_published = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    description = models.TextField(verbose_name='Description', blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
     description = models.TextField(verbose_name='Description', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
